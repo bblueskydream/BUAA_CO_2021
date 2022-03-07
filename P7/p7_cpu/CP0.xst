@@ -1,0 +1,5 @@
+set -tmpdir "G:/CS_Project/P7/p7_cpu/xst/projnav.tmp"
+set -xsthdpdir "G:/CS_Project/P7/p7_cpu/xst"
+elaborate
+-ifn CP0.prj
+-ifmt mixed

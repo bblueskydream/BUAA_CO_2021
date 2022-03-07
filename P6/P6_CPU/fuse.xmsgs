@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 216: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 294: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 295: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 296: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 297: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 311: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 312: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 313: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 314: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 315: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 316: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 216: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 294: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 295: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 296: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 297: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 311: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 312: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 313: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 314: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 315: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="327" delta="unknown" >"G:/CS_Project/P6/P6_CPU/mips.v" Line 316: Concatenation with unsized literal; will interpret as 32 bits
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"G:/CS_Project/P6/P6_CPU/IF_ID.v" Line 30: Port <arg fmt="%s" index="1">m_d</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"G:/CS_Project/P6/P6_CPU/ID_EX.v" Line 30: Port <arg fmt="%s" index="1">m_d</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"G:/CS_Project/P6/P6_CPU/EX_MEM.v" Line 31: Port <arg fmt="%s" index="1">m_d</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"G:/CS_Project/P6/P6_CPU/MEM_WB.v" Line 29: Port <arg fmt="%s" index="1">m_d</arg> is not connected to this instance
+</msg>
+
+</messages>
+

@@ -1,0 +1,30 @@
+Command line:
+   BlockChecker_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  12011
+
+Wed Nov 03 21:41:51 2021
+
+
+ Elaboration Time: 0.15625 sec
+
+ Current Memory Usage: 5805.65 Meg
+
+ Total Signals          : 18
+ Total Nets             : 24
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 36
+ Total Scalar Nets and Variables : 227
+Total Line Count : 100
+Total Line Count : 100
+
+ Total Simulation Time: 0.328125 sec
+
+ Current Memory Usage: 5333.79 Meg
+
+Wed Nov 03 21:43:49 2021
+

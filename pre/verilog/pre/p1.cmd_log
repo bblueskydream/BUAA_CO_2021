@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/p1.xst" -ofn "D:/ISE_CODE/pre/p1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 p1.ngc p1.ngd  

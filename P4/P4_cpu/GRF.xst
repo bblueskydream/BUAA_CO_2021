@@ -1,0 +1,5 @@
+set -tmpdir "D:/ISE_CODE/P4_cpu/xst/projnav.tmp"
+set -xsthdpdir "D:/ISE_CODE/P4_cpu/xst"
+elaborate
+-ifn GRF.prj
+-ifmt mixed

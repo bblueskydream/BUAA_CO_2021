@@ -1,0 +1,29 @@
+Command line:
+   SFU_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  2809
+
+Mon Nov 29 13:03:25 2021
+
+
+ Elaboration Time: 0.234375 sec
+
+ Current Memory Usage: 5804.6 Meg
+
+ Total Signals          : 165
+ Total Nets             : 342
+ Total Signal Drivers   : 107
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 109
+ Total Traceable Variables  : 66
+ Total Scalar Nets and Variables : 918
+Total Line Count : 117
+
+ Total Simulation Time: 0.234375 sec
+
+ Current Memory Usage: 5804.6 Meg
+
+Mon Nov 29 13:03:29 2021
+

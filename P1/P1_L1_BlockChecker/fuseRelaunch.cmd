@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/ISE_CODE/P1_L1_BlockChecker/BlockChecker_tb_isim_beh.exe" -prj "D:/ISE_CODE/P1_L1_BlockChecker/BlockChecker_tb_beh.prj" "work.BlockChecker_tb" "work.glbl" 

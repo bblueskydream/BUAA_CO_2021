@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="G:/CS_Project/P6/P6_CPU/sfu_tb_isim_beh1.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="sfu_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/sfu_tb/Stall" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Stall</obj_property>
+      <obj_property name="ObjectShortName">Stall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/RD1_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RD1_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">RD1_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/RD2_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RD2_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">RD2_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/SrcA_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SrcA_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcA_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/SrcB_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SrcB_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">SrcB_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/M_Data_s" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">M_Data_s[3:0]</obj_property>
+      <obj_property name="ObjectShortName">M_Data_s[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/d_I" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_I[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d_I[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/d_j_rs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_j_rs</obj_property>
+      <obj_property name="ObjectShortName">d_j_rs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/d_rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">d_rt[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/d_rd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">d_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">d_rd[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/ex_I" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_I[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_I[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/ex_rs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_rs[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/ex_rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_rt[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/ex_rd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ex_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ex_rd[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/mem_I" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_I[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_I[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/mem_rs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_rs[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/mem_rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_rt[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/mem_rd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_rd[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffa500</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/wb_I" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_I[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_I[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/wb_rs" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_rs[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_rs[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/wb_rt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_rt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_rt[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/uut/wb_rd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wb_rd[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wb_rd[4:0]</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ffff00</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/sfu_tb/start" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+</wave_config>

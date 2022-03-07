@@ -1,0 +1,84 @@
+Running: E:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o G:/CS_Project/P7/p7_cpu/mips_txt_isim_beh.exe -prj G:/CS_Project/P7/p7_cpu/mips_txt_beh.prj work.mips_txt work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/Controller.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/SFU.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/NPC.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/MEM_WB.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/IF_ID.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/IFU.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/ID_EX.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/GRF.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/EX_MEM.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/Ext.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/CP0.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/CMP.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/ALU.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/P7_standard_timer_2019.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/CPU.v" into library work
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 266: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 418: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 419: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 420: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 421: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 441: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 442: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 443: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 444: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 445: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 446: Concatenation with unsized literal; will interpret as 32 bits
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/Bridge.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/mips.v" into library work
+Analyzing Verilog file "G:/CS_Project/P7/p7_cpu/../P7_test/interrupt_test/tb_interrupt.v" into library work
+Analyzing Verilog file "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 152: Port A1 is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 216: Port E_eret is not connected to this instance
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 266: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 418: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 419: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 420: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 421: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 441: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 442: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 443: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 444: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 445: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:327 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 446: Concatenation with unsized literal; will interpret as 32 bits
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/CPU.v" Line 452: Port cp0_we is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/IF_ID.v" Line 36: Port m_d is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/ID_EX.v" Line 33: Port m_d is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/EX_MEM.v" Line 34: Port m_d is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/MEM_WB.v" Line 31: Port m_d is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/SFU.v" Line 30: Port mtc0 is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/SFU.v" Line 57: Port eret is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/SFU.v" Line 84: Port eret is not connected to this instance
+WARNING:HDLCompiler:1016 - "G:/CS_Project/P7/p7_cpu/SFU.v" Line 111: Port eret is not connected to this instance
+Completed static elaboration
+Compiling module NPC
+Compiling module IFU
+Compiling module Controller
+Compiling module IF_ID
+Compiling module GRF
+Compiling module CMP
+Compiling module ID_EX
+Compiling module Ext
+Compiling module ALU
+Compiling module EX_MEM
+Compiling module CP0
+Compiling module MEM_WB
+Compiling module SFU
+Compiling module CPU
+Compiling module Bridge
+Compiling module TC
+Compiling module mips
+Compiling module mips_txt
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 19 Verilog Units
+Built simulation executable G:/CS_Project/P7/p7_cpu/mips_txt_isim_beh.exe
+Fuse Memory Usage: 31624 KB
+Fuse CPU Usage: 530 ms

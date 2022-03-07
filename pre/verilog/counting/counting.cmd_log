@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/counting/counting.xst" -ofn "D:/ISE_CODE/counting/counting.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 counting.ngc counting.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o counting_map.ncd counting.ngd counting.pcf 
+par -w -intstyle ise -ol high -t 1 counting_map.ncd counting.ncd counting.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counting.twx counting.ncd -o counting.twr counting.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/counting/counting.xst" -ofn "D:/ISE_CODE/counting/counting.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 counting.ngc counting.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o counting_map.ncd counting.ngd counting.pcf 
+par -w -intstyle ise -ol high -t 1 counting_map.ncd counting.ncd counting.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counting.twx counting.ncd -o counting.twr counting.pcf 

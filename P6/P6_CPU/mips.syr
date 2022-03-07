@@ -1,0 +1,327 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xa3s50-4-vqg100
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Controller.v" in library work
+Compiling verilog file "SFU.v" in library work
+Module <Controller> compiled
+Compiling verilog file "NPC.v" in library work
+Compiling verilog include file "define.v"
+Module <SFU> compiled
+Compiling verilog file "MU_DIV.v" in library work
+Module <NPC> compiled
+Compiling verilog file "MEM_WB.v" in library work
+Module <MDU> compiled
+Compiling verilog file "IF_ID.v" in library work
+Compiling verilog include file "define.v"
+Module <MEM_WB> compiled
+Compiling verilog file "IFU.v" in library work
+Module <IF_ID> compiled
+Compiling verilog file "ID_EX.v" in library work
+Module <IFU> compiled
+Compiling verilog file "GRF.v" in library work
+Module <ID_EX> compiled
+Compiling verilog file "EX_MEM.v" in library work
+Module <GRF> compiled
+Compiling verilog file "Ext.v" in library work
+Module <EX_MEM> compiled
+Compiling verilog file "CMP.v" in library work
+Module <Ext> compiled
+Compiling verilog file "ALU.v" in library work
+Module <CMP> compiled
+Compiling verilog file "mips.v" in library work
+Module <ALU> compiled
+Module <mips> compiled
+No errors in compilation
+Analysis of file <"mips.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <mips> in library <work>.
+
+Analyzing hierarchy for module <NPC> in library <work>.
+
+Analyzing hierarchy for module <IFU> in library <work>.
+
+Analyzing hierarchy for module <IF_ID> in library <work>.
+
+Analyzing hierarchy for module <GRF> in library <work>.
+
+Analyzing hierarchy for module <CMP> in library <work>.
+
+Analyzing hierarchy for module <ID_EX> in library <work>.
+
+Analyzing hierarchy for module <Ext> in library <work>.
+
+Analyzing hierarchy for module <MDU> in library <work> with parameters.
+	D_cycle = "00000000000000000000000000001010"
+	MU_cycle = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <EX_MEM> in library <work>.
+
+Analyzing hierarchy for module <MEM_WB> in library <work>.
+
+Analyzing hierarchy for module <SFU> in library <work>.
+
+Analyzing hierarchy for module <Controller> in library <work> with parameters.
+	ADD = "100000"
+	ADDI = "001000"
+	ADDIU = "001001"
+	ADDU = "100001"
+	AND = "100100"
+	ANDI = "001100"
+	BEQ = "000100"
+	BGEZ = "000001"
+	BGTZ = "000111"
+	BLEZ = "000110"
+	BLTZ = "000001"
+	BNE = "000101"
+	DIV = "011010"
+	DIVU = "011011"
+	J = "000010"
+	JAL = "000011"
+	JALR = "001001"
+	JR = "001000"
+	LB = "100000"
+	LBU = "100100"
+	LH = "100001"
+	LHU = "100101"
+	LUI = "001111"
+	LW = "100011"
+	MFHI = "010000"
+	MFLO = "010010"
+	MTHI = "010001"
+	MTLO = "010011"
+	MULT = "011000"
+	MULTU = "011001"
+	NOR = "100111"
+	OR = "100101"
+	ORI = "001101"
+	SB = "101000"
+	SH = "101001"
+	SLL = "000000"
+	SLLV = "000100"
+	SLT = "101010"
+	SLTI = "001010"
+	SLTIU = "001011"
+	SLTU = "101011"
+	SRA = "000011"
+	SRAV = "000111"
+	SRL = "000010"
+	SRLV = "000110"
+	SUB = "100010"
+	SUBU = "100011"
+	SW = "101011"
+	XOR = "100110"
+	XORI = "001110"
+	ZERO = "00000000000000000000000000000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <mips>.
+WARNING:Xst:852 - "mips.v" line 179: Unconnected input port 'WE' of instance 'id_ex' is tied to GND.
+WARNING:Xst:852 - "mips.v" line 349: Unconnected input port 'busy' of instance 'sfu' is tied to GND.
+WARNING:Xst:852 - "mips.v" line 349: Unconnected input port 'start' of instance 'sfu' is tied to GND.
+Module <mips> is correct for synthesis.
+ 
+Analyzing module <NPC> in library <work>.
+Module <NPC> is correct for synthesis.
+ 
+Analyzing module <IFU> in library <work>.
+WARNING:Xst:863 - "IFU.v" line 27: Name conflict (<pc> and <PC>, renaming pc as pc_rnm0).
+Module <IFU> is correct for synthesis.
+ 
+Analyzing module <IF_ID> in library <work>.
+Module <IF_ID> is correct for synthesis.
+ 
+Analyzing module <Controller> in library <work>.
+	ADD = 6'b100000
+	ADDI = 6'b001000
+	ADDIU = 6'b001001
+	ADDU = 6'b100001
+	AND = 6'b100100
+	ANDI = 6'b001100
+	BEQ = 6'b000100
+	BGEZ = 6'b000001
+	BGTZ = 6'b000111
+	BLEZ = 6'b000110
+	BLTZ = 6'b000001
+	BNE = 6'b000101
+	DIV = 6'b011010
+	DIVU = 6'b011011
+	J = 6'b000010
+	JAL = 6'b000011
+	JALR = 6'b001001
+	JR = 6'b001000
+	LB = 6'b100000
+	LBU = 6'b100100
+	LH = 6'b100001
+	LHU = 6'b100101
+	LUI = 6'b001111
+	LW = 6'b100011
+	MFHI = 6'b010000
+	MFLO = 6'b010010
+	MTHI = 6'b010001
+	MTLO = 6'b010011
+	MULT = 6'b011000
+	MULTU = 6'b011001
+	NOR = 6'b100111
+	OR = 6'b100101
+	ORI = 6'b001101
+	SB = 6'b101000
+	SH = 6'b101001
+	SLL = 6'b000000
+	SLLV = 6'b000100
+	SLT = 6'b101010
+	SLTI = 6'b001010
+	SLTIU = 6'b001011
+	SLTU = 6'b101011
+	SRA = 6'b000011
+	SRAV = 6'b000111
+	SRL = 6'b000010
+	SRLV = 6'b000110
+	SUB = 6'b100010
+	SUBU = 6'b100011
+	SW = 6'b101011
+	XOR = 6'b100110
+	XORI = 6'b001110
+	ZERO = 32'sb00000000000000000000000000000000
+Module <Controller> is correct for synthesis.
+ 
+Analyzing module <GRF> in library <work>.
+WARNING:Xst:1643 - "GRF.v" line 32: You are giving the signal i a default value. i already had a default value, which will be overridden by this one.
+Module <GRF> is correct for synthesis.
+ 
+Analyzing module <CMP> in library <work>.
+Module <CMP> is correct for synthesis.
+ 
+Analyzing module <ID_EX> in library <work>.
+Module <ID_EX> is correct for synthesis.
+ 
+Analyzing module <Ext> in library <work>.
+Module <Ext> is correct for synthesis.
+ 
+Analyzing module <MDU> in library <work>.
+WARNING:Xst:863 - "MU_DIV.v" line 26: Name conflict (<HI> and <hi>, renaming HI as hi_rnm0).
+WARNING:Xst:863 - "MU_DIV.v" line 26: Name conflict (<LO> and <lo>, renaming LO as lo_rnm0).
+	D_cycle = 32'sb00000000000000000000000000001010
+	MU_cycle = 32'sb00000000000000000000000000000101
+ERROR:Xst:870 - "MU_DIV.v" line 58: Can not simplify operator MOD.
+ 
+Found 1 error(s). Aborting synthesis.
+--> 
+
+Total memory usage is 4498288 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

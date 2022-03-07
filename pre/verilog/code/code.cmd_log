@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 code.ngc code.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o code_map.ncd code.ngd code.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 code.ngc code.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o code_map.ncd code.ngd code.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 code.ngc code.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o code_map.ncd code.ngd code.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 code.ngc code.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o code_map.ncd code.ngd code.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 code.ngc code.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o code_map.ncd code.ngd code.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/code/code.xst" -ofn "D:/ISE_CODE/code/code.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 code.ngc code.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o code_map.ncd code.ngd code.pcf 

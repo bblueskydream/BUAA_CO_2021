@@ -1,0 +1,476 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: BlockChecker.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BlockChecker.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BlockChecker"
+Output Format                      : NGC
+Target Device                      : xa3s50-4-vqg100
+
+---- Source Options
+Top Module Name                    : BlockChecker
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "block_checker.v" in library work
+Module <BlockChecker> compiled
+No errors in compilation
+Analysis of file <"BlockChecker.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <BlockChecker> in library <work> with parameters.
+	S0 = "00000000000000000000000000000000"
+	S1 = "0001"
+	S10 = "1011"
+	S11 = "1100"
+	S2 = "0010"
+	S3 = "0011"
+	S4 = "0100"
+	S5 = "0101"
+	S6 = "0111"
+	S7 = "1000"
+	S8 = "1001"
+	S9 = "1010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <BlockChecker>.
+	S0 = 32'sb00000000000000000000000000000000
+	S1 = 4'b0001
+	S10 = 4'b1011
+	S11 = 4'b1100
+	S2 = 4'b0010
+	S3 = 4'b0011
+	S4 = 4'b0100
+	S5 = 4'b0101
+	S6 = 4'b0111
+	S7 = 4'b1000
+	S8 = 4'b1001
+	S9 = 4'b1010
+Module <BlockChecker> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <BlockChecker>.
+    Related source file is "block_checker.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 29                                             |
+    | Inputs             | 13                                             |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <begin_num>.
+    Found 32-bit comparator greater for signal <begin_num$cmp_gt0000> created at line 112.
+    Found 32-bit addsub for signal <begin_num$share0000> created at line 56.
+    Found 1-bit register for signal <sign>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <BlockChecker> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit addsub                                         : 1
+# Registers                                            : 2
+ 1-bit register                                        : 1
+ 32-bit register                                       : 1
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:4]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0110
+ 0011  | 0111
+ 0100  | 0101
+ 0101  | 0011
+ 0111  | 1100
+ 1000  | 0100
+ 1001  | 1101
+ 1010  | 0010
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 32-bit addsub                                         : 1
+# Registers                                            : 33
+ Flip-Flops                                            : 33
+# Comparators                                          : 1
+ 32-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <BlockChecker> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BlockChecker, actual ratio is 9.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : BlockChecker.ngr
+Top Level Output File Name         : BlockChecker
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 210
+#      GND                         : 1
+#      LUT2                        : 14
+#      LUT2_D                      : 1
+#      LUT3                        : 5
+#      LUT3_L                      : 1
+#      LUT4                        : 98
+#      LUT4_D                      : 2
+#      LUT4_L                      : 2
+#      MUXCY                       : 48
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 37
+#      FDC                         : 36
+#      FDCE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 9
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa3s50vqg100-4 
+
+ Number of Slices:                       67  out of    768     8%  
+ Number of Slice Flip Flops:             37  out of   1536     2%  
+ Number of 4 input LUTs:                123  out of   1536     8%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of     63    17%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 37    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 37    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.345ns (Maximum Frequency: 107.009MHz)
+   Minimum input arrival time before clock: 10.306ns
+   Maximum output required time after clock: 12.237ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.345ns (frequency: 107.009MHz)
+  Total number of paths / destination ports: 5809 / 37
+-------------------------------------------------------------------------
+Delay:               9.345ns (Levels of Logic = 35)
+  Source:            state_FSM_FFd1 (FF)
+  Destination:       begin_num_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: state_FSM_FFd1 to begin_num_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             13   0.720   1.509  state_FSM_FFd1 (state_FSM_FFd1)
+     LUT2:I0->O            8   0.551   1.109  state_FSM_FFd2-In111_1 (state_FSM_FFd2-In111)
+     LUT4:I3->O            1   0.551   0.000  Maddsub_begin_num_share0000_lut<0> (Maddsub_begin_num_share0000_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  Maddsub_begin_num_share0000_cy<0> (Maddsub_begin_num_share0000_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<1> (Maddsub_begin_num_share0000_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<2> (Maddsub_begin_num_share0000_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<3> (Maddsub_begin_num_share0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<4> (Maddsub_begin_num_share0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<5> (Maddsub_begin_num_share0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<6> (Maddsub_begin_num_share0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<7> (Maddsub_begin_num_share0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<8> (Maddsub_begin_num_share0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<9> (Maddsub_begin_num_share0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<10> (Maddsub_begin_num_share0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<11> (Maddsub_begin_num_share0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<12> (Maddsub_begin_num_share0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<13> (Maddsub_begin_num_share0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<14> (Maddsub_begin_num_share0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<15> (Maddsub_begin_num_share0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<16> (Maddsub_begin_num_share0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<17> (Maddsub_begin_num_share0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<18> (Maddsub_begin_num_share0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<19> (Maddsub_begin_num_share0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<20> (Maddsub_begin_num_share0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<21> (Maddsub_begin_num_share0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<22> (Maddsub_begin_num_share0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<23> (Maddsub_begin_num_share0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<24> (Maddsub_begin_num_share0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<25> (Maddsub_begin_num_share0000_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<26> (Maddsub_begin_num_share0000_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<27> (Maddsub_begin_num_share0000_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<28> (Maddsub_begin_num_share0000_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  Maddsub_begin_num_share0000_cy<29> (Maddsub_begin_num_share0000_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  Maddsub_begin_num_share0000_cy<30> (Maddsub_begin_num_share0000_cy<30>)
+     XORCY:CI->O           1   0.904   0.827  Maddsub_begin_num_share0000_xor<31> (begin_num_share0000<31>)
+     LUT4:I3->O            1   0.551   0.000  begin_num_mux0000<31>1 (begin_num_mux0000<31>)
+     FDC:D                     0.203          begin_num_31
+    ----------------------------------------
+    Total                      9.345ns (5.900ns logic, 3.445ns route)
+                                       (63.1% logic, 36.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 596 / 37
+-------------------------------------------------------------------------
+Offset:              10.306ns (Levels of Logic = 6)
+  Source:            in<1> (PAD)
+  Destination:       begin_num_6 (FF)
+  Destination Clock: clk rising
+
+  Data Path: in<1> to begin_num_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.821   1.509  in_1_IBUF (in_1_IBUF)
+     LUT2:I0->O            2   0.551   0.903  state_FSM_FFd3-In91 (N24)
+     LUT4:I3->O            1   0.551   0.827  state_cmp_eq0012_SW0 (N28)
+     LUT4:I3->O            3   0.551   1.246  state_cmp_eq0012 (state_cmp_eq0012)
+     LUT4_D:I0->O         31   0.551   2.042  begin_num_mux0000<0>11 (N01)
+     LUT4:I1->O            1   0.551   0.000  begin_num_mux0000<6>1 (begin_num_mux0000<6>)
+     FDC:D                     0.203          begin_num_6
+    ----------------------------------------
+    Total                     10.306ns (3.779ns logic, 6.527ns route)
+                                       (36.7% logic, 63.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 39 / 1
+-------------------------------------------------------------------------
+Offset:              12.237ns (Levels of Logic = 5)
+  Source:            state_FSM_FFd4 (FF)
+  Destination:       result (PAD)
+  Source Clock:      clk rising
+
+  Data Path: state_FSM_FFd4 to result
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             35   0.720   2.065  state_FSM_FFd4 (state_FSM_FFd4)
+     LUT2:I1->O            3   0.551   1.102  state_FSM_Out11 (state_cmp_eq0014)
+     LUT4:I1->O            1   0.551   0.000  result_wg_lut<7> (result_wg_lut<7>)
+     MUXCY:S->O            1   0.500   0.000  result_wg_cy<7> (result_wg_cy<7>)
+     MUXCY:CI->O           1   0.303   0.801  result_wg_cy<8> (result_OBUF)
+     OBUF:I->O                 5.644          result_OBUF (result)
+    ----------------------------------------
+    Total                     12.237ns (8.269ns logic, 3.968ns route)
+                                       (67.6% logic, 32.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.22 secs
+ 
+--> 
+
+Total memory usage is 4502440 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

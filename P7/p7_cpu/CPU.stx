@@ -1,0 +1,68 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to G:/CS_Project/P7/p7_cpu/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to G:/CS_Project/P7/p7_cpu/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Controller.v" in library work
+Compiling verilog file "SFU.v" in library work
+Module <Controller> compiled
+Compiling verilog file "NPC.v" in library work
+Compiling verilog include file "define.v"
+Module <SFU> compiled
+Compiling verilog file "MU_DIV.v" in library work
+Module <NPC> compiled
+Compiling verilog file "MEM_WB.v" in library work
+Module <MDU> compiled
+Compiling verilog file "IF_ID.v" in library work
+Compiling verilog include file "define.v"
+Module <MEM_WB> compiled
+Compiling verilog file "IFU.v" in library work
+Module <IF_ID> compiled
+Compiling verilog file "ID_EX.v" in library work
+Module <IFU> compiled
+Compiling verilog file "GRF.v" in library work
+Module <ID_EX> compiled
+Compiling verilog file "EX_MEM.v" in library work
+Module <GRF> compiled
+Compiling verilog file "Ext.v" in library work
+Module <EX_MEM> compiled
+Compiling verilog file "CP0.v" in library work
+Module <Ext> compiled
+Compiling verilog file "CMP.v" in library work
+Module <CP0> compiled
+Compiling verilog file "ALU.v" in library work
+Module <CMP> compiled
+Compiling verilog file "CPU.v" in library work
+Compiling verilog include file "define.v"
+Module <ALU> compiled
+Module <CPU> compiled
+No errors in compilation
+Analysis of file <"CPU.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> 
+
+Total memory usage is 4476456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

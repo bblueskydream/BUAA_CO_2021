@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj pre -o D:/ISE_CODE/pre/sim.tfi -lib work D:/ISE_CODE/pre//sim.v -module sim -template E:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer.xst" -ofn "D:/ISE_CODE/pre/buffer.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer.xst" -ofn "D:/ISE_CODE/pre/buffer.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer.xst" -ofn "D:/ISE_CODE/pre/buffer.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer.xst" -ofn "D:/ISE_CODE/pre/buffer.syr" 

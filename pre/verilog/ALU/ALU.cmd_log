@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/ALU/ALU.xst" -ofn "D:/ISE_CODE/ALU/ALU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 ALU.ngc ALU.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/ALU/ALU.xst" -ofn "D:/ISE_CODE/ALU/ALU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 ALU.ngc ALU.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 ALU.ngc ALU.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/ALU/ALU.xst" -ofn "D:/ISE_CODE/ALU/ALU.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 ALU.ngc ALU.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o ALU_map.ncd ALU.ngd ALU.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/ALU/ALU.xst" -ofn "D:/ISE_CODE/ALU/ALU.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/ALU/alu.xst" -ofn "D:/ISE_CODE/ALU/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 alu.ngc alu.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o alu_map.ncd alu.ngd alu.pcf 
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o alu_map.ncd alu.ngd alu.pcf 

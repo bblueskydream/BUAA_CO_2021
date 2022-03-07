@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/alu1/alu.xst" -ofn "D:/ISE_CODE/alu1/alu.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/alu1/alu.xst" -ofn "D:/ISE_CODE/alu1/alu.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 alu.ngc alu.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o alu_map.ncd alu.ngd alu.pcf 

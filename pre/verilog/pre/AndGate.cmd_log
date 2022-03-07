@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/AndGate.xst" -ofn "D:/ISE_CODE/pre/AndGate.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 AndGate.ngc AndGate.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o AndGate_map.ncd AndGate.ngd AndGate.pcf 
+par -w -intstyle ise -ol high -mt off AndGate_map.ncd AndGate.ncd AndGate.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AndGate.twx AndGate.ncd -o AndGate.twr AndGate.pcf 

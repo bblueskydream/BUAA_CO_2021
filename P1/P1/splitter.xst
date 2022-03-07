@@ -1,0 +1,5 @@
+set -tmpdir "D:/ISE_CODE/P1_L0_splitter/xst/projnav.tmp"
+set -xsthdpdir "D:/ISE_CODE/P1_L0_splitter/xst"
+elaborate
+-ifn splitter.prj
+-ifmt mixed

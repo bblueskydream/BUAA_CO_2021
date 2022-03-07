@@ -1,0 +1,7 @@
+verilog work "GRF.v"
+verilog work "Ext.v"
+verilog work "DM.v"
+verilog work "Controller.v"
+verilog work "mips.v"
+verilog work "mips_tb.v"
+verilog work "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

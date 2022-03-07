@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/ISE_CODE/pre/pre_isim_beh.exe" -prj "D:/ISE_CODE/pre/pre_beh.prj" "work.pre" "work.glbl" 

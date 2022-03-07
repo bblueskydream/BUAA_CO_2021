@@ -1,0 +1,17 @@
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/ISE_CODE/pre/pre_isim_beh.exe -prj D:/ISE_CODE/pre/pre_beh.prj work.pre work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/ISE_CODE/pre/pre.v" into library work
+WARNING:HDLCompiler:751 - "D:/ISE_CODE/pre/pre.v" Line 27: Redeclaration of ansi port b is not allowed
+Analyzing Verilog file "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 159320 KB
+Fuse CPU Usage: 156 ms
+Compiling module pre
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+ERROR:Simulator:861 - Failed to link the design

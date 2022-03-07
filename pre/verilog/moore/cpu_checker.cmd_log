@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/moore/cpu_checker.xst" -ofn "D:/ISE_CODE/moore/cpu_checker.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/moore/cpu_checker.xst" -ofn "D:/ISE_CODE/moore/cpu_checker.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/moore/cpu_checker.xst" -ofn "D:/ISE_CODE/moore/cpu_checker.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/moore/cpu_checker.xst" -ofn "D:/ISE_CODE/moore/cpu_checker.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/moore/cpu_checker.xst" -ofn "D:/ISE_CODE/moore/cpu_checker.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/moore/cpu_checker.xst" -ofn "D:/ISE_CODE/moore/cpu_checker.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa3s50-vqg100-4 cpu_checker.ngc cpu_checker.ngd  
+map -intstyle ise -p xa3s50-vqg100-4 -cm area -ir off -pr off -c 100 -o cpu_checker_map.ncd cpu_checker.ngd cpu_checker.pcf 
+par -w -intstyle ise -ol high -t 1 cpu_checker_map.ncd cpu_checker.ncd cpu_checker.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml cpu_checker.twx cpu_checker.ncd -o cpu_checker.twr cpu_checker.pcf 

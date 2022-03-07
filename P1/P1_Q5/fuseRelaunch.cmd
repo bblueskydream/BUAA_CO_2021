@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/ISE_CODE/P1_Q5/string_tb_isim_beh.exe" -prj "D:/ISE_CODE/P1_Q5/string_tb_beh.prj" "work.string_tb" "work.glbl" 

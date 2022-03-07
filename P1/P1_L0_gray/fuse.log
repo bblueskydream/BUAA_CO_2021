@@ -1,0 +1,18 @@
+Running: E:\ISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/ISE_CODE/P1_L0_gray/gray_tb_isim_beh.exe -prj D:/ISE_CODE/P1_L0_gray/gray_tb_beh.prj work.gray_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/ISE_CODE/P1_L0_gray/gray.v" into library work
+Analyzing Verilog file "D:/ISE_CODE/P1_L0_gray/gray_tb.v" into library work
+Analyzing Verilog file "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module gray
+Compiling module gray_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 3 Verilog Units
+Built simulation executable D:/ISE_CODE/P1_L0_gray/gray_tb_isim_beh.exe
+Fuse Memory Usage: 28088 KB
+Fuse CPU Usage: 280 ms

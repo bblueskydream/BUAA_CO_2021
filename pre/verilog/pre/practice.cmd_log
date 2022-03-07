@@ -1,0 +1,10 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/practice.xst" -ofn "D:/ISE_CODE/pre/practice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 practice.ngc practice.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o practice_map.ncd practice.ngd practice.pcf 
+par -w -intstyle ise -ol high -mt off practice_map.ncd practice.ncd practice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml practice.twx practice.ncd -o practice.twr practice.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/practice.xst" -ofn "D:/ISE_CODE/pre/practice.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 practice.ngc practice.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o practice_map.ncd practice.ngd practice.pcf 
+par -w -intstyle ise -ol high -mt off practice_map.ncd practice.ncd practice.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml practice.twx practice.ncd -o practice.twr practice.pcf 

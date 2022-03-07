@@ -1,0 +1,2 @@
+verilog work "Controller.v"
+verilog work "MEM_WB.v"

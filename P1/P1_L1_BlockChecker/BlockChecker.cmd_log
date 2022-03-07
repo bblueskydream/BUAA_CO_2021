@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/P1_L1_BlockChecker/BlockChecker.xst" -ofn "D:/ISE_CODE/P1_L1_BlockChecker/BlockChecker.syr" 

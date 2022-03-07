@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/counter10.xst" -ofn "D:/ISE_CODE/pre/counter10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 counter10.ngc counter10.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o counter10_map.ncd counter10.ngd counter10.pcf 
+par -w -intstyle ise -ol high -mt off counter10_map.ncd counter10.ncd counter10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml counter10.twx counter10.ncd -o counter10.twr counter10.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/counter10.xst" -ofn "D:/ISE_CODE/pre/counter10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 counter10.ngc counter10.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o counter10_map.ncd counter10.ngd counter10.pcf 
+par -w -intstyle ise -ol high -mt off counter10_map.ncd counter10.ncd counter10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml counter10.twx counter10.ncd -o counter10.twr counter10.pcf 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/counter10.xst" -ofn "D:/ISE_CODE/pre/counter10.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 counter10.ngc counter10.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o counter10_map.ncd counter10.ngd counter10.pcf 
+par -w -intstyle ise -ol high -mt off counter10_map.ncd counter10.ncd counter10.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml counter10.twx counter10.ncd -o counter10.twr counter10.pcf 

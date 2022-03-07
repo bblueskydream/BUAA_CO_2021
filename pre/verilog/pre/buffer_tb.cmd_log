@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer_tb.xst" -ofn "D:/ISE_CODE/pre/buffer_tb.syr" 
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer_tb.xst" -ofn "D:/ISE_CODE/pre/buffer_tb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer_tb.xst" -ofn "D:/ISE_CODE/pre/buffer_tb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer_tb.xst" -ofn "D:/ISE_CODE/pre/buffer_tb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  
+xst -intstyle ise -ifn "D:/ISE_CODE/pre/buffer_tb.xst" -ofn "D:/ISE_CODE/pre/buffer_tb.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 buffer_tb.ngc buffer_tb.ngd  

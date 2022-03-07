@@ -1,0 +1,59 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to G:/CS_Project/P5/P5_cpu/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> Parameter xsthdpdir set to G:/CS_Project/P5/P5_cpu/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Controller.v" in library work
+Compiling verilog file "SFU.v" in library work
+Module <Controller> compiled
+Compiling verilog file "MEM_WB.v" in library work
+Module <SFU> compiled
+Compiling verilog file "IF_ID.v" in library work
+Compiling verilog include file "IFU.v"
+Module <MEM_WB> compiled
+Module <IFU> compiled
+Compiling verilog file "ID_EX.v" in library work
+Module <IF_ID> compiled
+Compiling verilog file "GRF.v" in library work
+Module <ID_EX> compiled
+Compiling verilog file "EX_MEM.v" in library work
+Module <GRF> compiled
+Compiling verilog file "Ext.v" in library work
+Module <EX_MEM> compiled
+Compiling verilog file "DM.v" in library work
+Module <Ext> compiled
+Compiling verilog file "ALU.v" in library work
+Module <DM> compiled
+Compiling verilog file "mips.v" in library work
+Module <ALU> compiled
+Module <mips> compiled
+No errors in compilation
+Analysis of file <"mips.prj"> succeeded.
+ 
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> 
+
+Total memory usage is 4468304 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

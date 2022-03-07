@@ -1,0 +1,1332 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xa3s50-4-vqg100
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Controller.v" in library work
+Compiling verilog file "SFU.v" in library work
+Module <Controller> compiled
+Compiling verilog file "NPC.v" in library work
+Compiling verilog include file "define.v"
+Module <SFU> compiled
+Compiling verilog file "MEM_WB.v" in library work
+Module <NPC> compiled
+Compiling verilog file "IF_ID.v" in library work
+Compiling verilog include file "define.v"
+Module <MEM_WB> compiled
+Compiling verilog file "IFU.v" in library work
+Module <IF_ID> compiled
+Compiling verilog file "ID_EX.v" in library work
+Module <IFU> compiled
+Compiling verilog file "GRF.v" in library work
+Module <ID_EX> compiled
+Compiling verilog file "EX_MEM.v" in library work
+Module <GRF> compiled
+Compiling verilog file "Ext.v" in library work
+Module <EX_MEM> compiled
+Compiling verilog file "CP0.v" in library work
+Module <Ext> compiled
+Compiling verilog file "CMP.v" in library work
+Module <CP0> compiled
+Compiling verilog file "ALU.v" in library work
+Module <CMP> compiled
+Compiling verilog file "P7_standard_timer_2019.v" in library work
+Module <ALU> compiled
+Compiling verilog file "CPU.v" in library work
+Compiling verilog include file "define.v"
+Module <TC> compiled
+Compiling verilog file "Bridge.v" in library work
+Module <CPU> compiled
+Compiling verilog file "mips.v" in library work
+Module <Bridge> compiled
+Module <mips> compiled
+No errors in compilation
+Analysis of file <"mips.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <mips> in library <work>.
+
+Analyzing hierarchy for module <CPU> in library <work>.
+
+Analyzing hierarchy for module <Bridge> in library <work>.
+
+Analyzing hierarchy for module <TC> in library <work>.
+
+Analyzing hierarchy for module <NPC> in library <work>.
+
+Analyzing hierarchy for module <IFU> in library <work>.
+
+Analyzing hierarchy for module <IF_ID> in library <work>.
+
+Analyzing hierarchy for module <GRF> in library <work>.
+
+Analyzing hierarchy for module <CMP> in library <work>.
+
+Analyzing hierarchy for module <ID_EX> in library <work>.
+
+Analyzing hierarchy for module <Ext> in library <work>.
+
+Analyzing hierarchy for module <ALU> in library <work>.
+
+Analyzing hierarchy for module <EX_MEM> in library <work>.
+
+Analyzing hierarchy for module <CP0> in library <work>.
+
+Analyzing hierarchy for module <MEM_WB> in library <work>.
+
+Analyzing hierarchy for module <SFU> in library <work>.
+
+Analyzing hierarchy for module <Controller> in library <work> with parameters.
+	ADD = "100000"
+	ADDI = "001000"
+	ADDIU = "001001"
+	ADDU = "100001"
+	AND = "100100"
+	ANDI = "001100"
+	BEQ = "000100"
+	BGEZ = "000001"
+	BGTZ = "000111"
+	BLEZ = "000110"
+	BLTZ = "000001"
+	BNE = "000101"
+	DIV = "011010"
+	DIVU = "011011"
+	ERET = "010000"
+	J = "000010"
+	JAL = "000011"
+	JALR = "001001"
+	JR = "001000"
+	LB = "100000"
+	LBU = "100100"
+	LH = "100001"
+	LHU = "100101"
+	LUI = "001111"
+	LW = "100011"
+	MFC0 = "010000"
+	MFHI = "010000"
+	MFLO = "010010"
+	MTC0 = "010000"
+	MTHI = "010001"
+	MTLO = "010011"
+	MULT = "011000"
+	MULTU = "011001"
+	NOR = "100111"
+	OR = "100101"
+	ORI = "001101"
+	SB = "101000"
+	SH = "101001"
+	SLL = "000000"
+	SLLV = "000100"
+	SLT = "101010"
+	SLTI = "001010"
+	SLTIU = "001011"
+	SLTU = "101011"
+	SRA = "000011"
+	SRAV = "000111"
+	SRL = "000010"
+	SRLV = "000110"
+	SUB = "100010"
+	SUBU = "100011"
+	SW = "101011"
+	XOR = "100110"
+	XORI = "001110"
+	ZERO = "00000000000000000000000000000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <mips>.
+Module <mips> is correct for synthesis.
+ 
+Analyzing module <CPU> in library <work>.
+WARNING:Xst:863 - "CPU.v" line 59: Name conflict (<MDU_OP> and <mdu_op>, renaming MDU_OP as mdu_op_rnm0).
+Module <CPU> is correct for synthesis.
+ 
+Analyzing module <NPC> in library <work>.
+Module <NPC> is correct for synthesis.
+ 
+Analyzing module <IFU> in library <work>.
+WARNING:Xst:863 - "IFU.v" line 27: Name conflict (<pc> and <PC>, renaming pc as pc_rnm0).
+Module <IFU> is correct for synthesis.
+ 
+Analyzing module <IF_ID> in library <work>.
+Module <IF_ID> is correct for synthesis.
+ 
+Analyzing module <Controller> in library <work>.
+	ADD = 6'b100000
+	ADDI = 6'b001000
+	ADDIU = 6'b001001
+	ADDU = 6'b100001
+	AND = 6'b100100
+	ANDI = 6'b001100
+	BEQ = 6'b000100
+	BGEZ = 6'b000001
+	BGTZ = 6'b000111
+	BLEZ = 6'b000110
+	BLTZ = 6'b000001
+	BNE = 6'b000101
+	DIV = 6'b011010
+	DIVU = 6'b011011
+	ERET = 6'b010000
+	J = 6'b000010
+	JAL = 6'b000011
+	JALR = 6'b001001
+	JR = 6'b001000
+	LB = 6'b100000
+	LBU = 6'b100100
+	LH = 6'b100001
+	LHU = 6'b100101
+	LUI = 6'b001111
+	LW = 6'b100011
+	MFC0 = 6'b010000
+	MFHI = 6'b010000
+	MFLO = 6'b010010
+	MTC0 = 6'b010000
+	MTHI = 6'b010001
+	MTLO = 6'b010011
+	MULT = 6'b011000
+	MULTU = 6'b011001
+	NOR = 6'b100111
+	OR = 6'b100101
+	ORI = 6'b001101
+	SB = 6'b101000
+	SH = 6'b101001
+	SLL = 6'b000000
+	SLLV = 6'b000100
+	SLT = 6'b101010
+	SLTI = 6'b001010
+	SLTIU = 6'b001011
+	SLTU = 6'b101011
+	SRA = 6'b000011
+	SRAV = 6'b000111
+	SRL = 6'b000010
+	SRLV = 6'b000110
+	SUB = 6'b100010
+	SUBU = 6'b100011
+	SW = 6'b101011
+	XOR = 6'b100110
+	XORI = 6'b001110
+	ZERO = 32'sb00000000000000000000000000000000
+Module <Controller> is correct for synthesis.
+ 
+Analyzing module <GRF> in library <work>.
+Module <GRF> is correct for synthesis.
+ 
+Analyzing module <CMP> in library <work>.
+Module <CMP> is correct for synthesis.
+ 
+Analyzing module <ID_EX> in library <work>.
+Module <ID_EX> is correct for synthesis.
+ 
+Analyzing module <Ext> in library <work>.
+Module <Ext> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+Module <ALU> is correct for synthesis.
+ 
+Analyzing module <EX_MEM> in library <work>.
+Module <EX_MEM> is correct for synthesis.
+ 
+Analyzing module <CP0> in library <work>.
+WARNING:Xst:863 - "CP0.v" line 34: Name conflict (<epc> and <EPC>, renaming epc as epc_rnm0).
+Module <CP0> is correct for synthesis.
+ 
+Analyzing module <MEM_WB> in library <work>.
+Module <MEM_WB> is correct for synthesis.
+ 
+Analyzing module <SFU> in library <work>.
+WARNING:Xst:863 - "SFU.v" line 22: Name conflict (<d_i> and <d_I>, renaming d_i as d_i_rnm0).
+WARNING:Xst:863 - "SFU.v" line 22: Name conflict (<wb_i> and <wb_I>, renaming wb_i as wb_i_rnm0).
+WARNING:Xst:863 - "SFU.v" line 22: Name conflict (<mem_i> and <mem_I>, renaming mem_i as mem_i_rnm0).
+WARNING:Xst:863 - "SFU.v" line 22: Name conflict (<ex_i> and <ex_I>, renaming ex_i as ex_i_rnm0).
+Module <SFU> is correct for synthesis.
+ 
+Analyzing module <Bridge> in library <work>.
+Module <Bridge> is correct for synthesis.
+ 
+Analyzing module <TC> in library <work>.
+Module <TC> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <i> in unit <GRF> has a constant value of 100000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<30>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<29>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<28>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<27>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<26>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<25>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<24>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<23>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<22>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<21>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<20>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<19>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<18>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<17>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<16>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<9>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<8>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<7>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<1>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <Cause<0>> in unit <CP0> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <PRID> in unit <CP0> has a constant value of 00010001001000100011001101000100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <i> in unit <TC> has a constant value of 11 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <Bridge>.
+    Related source file is "Bridge.v".
+    Found 32-bit 4-to-1 multiplexer for signal <PrRD>.
+    Found 32-bit comparator greatequal for signal <HitDEV0$cmp_ge0000> created at line 33.
+    Found 32-bit comparator lessequal for signal <HitDEV0$cmp_le0000> created at line 33.
+    Found 32-bit comparator greatequal for signal <HitDEV1$cmp_ge0000> created at line 34.
+    Found 32-bit comparator lessequal for signal <HitDEV1$cmp_le0000> created at line 34.
+    Summary:
+	inferred   4 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <Bridge> synthesized.
+
+
+Synthesizing Unit <TC>.
+    Related source file is "P7_standard_timer_2019.v".
+WARNING:Xst:647 - Input <Addr<31:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 7                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | WE                        (negative)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit 3-to-1 multiplexer for signal <Dout>.
+    Found 1-bit register for signal <_IRQ>.
+    Found 64-bit register for signal <mem<2:1>>.
+    Found 32-bit subtractor for signal <mem_2$addsub0000> created at line 72.
+    Found 32-bit comparator greater for signal <state$cmp_gt0000> created at line 72.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  97 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <TC> synthesized.
+
+
+Synthesizing Unit <NPC>.
+    Related source file is "NPC.v".
+WARNING:Xst:647 - Input <imm_1<31:30>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 4-to-1 multiplexer for signal <npc>.
+    Found 32-bit adder for signal <npc$addsub0000>.
+    Found 32-bit 4-to-1 multiplexer for signal <npc$mux0002>.
+    Found 32-bit adder for signal <npc$share0001>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  64 Multiplexer(s).
+Unit <NPC> synthesized.
+
+
+Synthesizing Unit <IFU>.
+    Related source file is "IFU.v".
+    Found 32-bit register for signal <pc_rnm0>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <IFU> synthesized.
+
+
+Synthesizing Unit <GRF>.
+    Related source file is "GRF.v".
+WARNING:Xst:647 - Input <PC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 43.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0001> created at line 44.
+    Found 1024-bit register for signal <GPR>.
+    Found 5-bit comparator equal for signal <RD1$cmp_eq0000> created at line 43.
+    Found 5-bit comparator equal for signal <RD2$cmp_eq0000> created at line 44.
+INFO:Xst:738 - HDL ADVISOR - 1024 flip-flops were inferred for signal <GPR>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  96 Multiplexer(s).
+Unit <GRF> synthesized.
+
+
+Synthesizing Unit <CMP>.
+    Related source file is "CMP.v".
+    Found 33-bit comparator lessequal for signal <lez>.
+    Found 33-bit comparator greater for signal <gz>.
+    Found 33-bit comparator less for signal <lz>.
+    Found 33-bit comparator greatequal for signal <gez>.
+    Found 32-bit comparator equal for signal <zero>.
+    Summary:
+	inferred   5 Comparator(s).
+Unit <CMP> synthesized.
+
+
+Synthesizing Unit <Ext>.
+    Related source file is "Ext.v".
+Unit <Ext> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "ALU.v".
+WARNING:Xst:646 - Signal <temp<30:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit xor2 for signal <overflow>.
+    Found 32-bit addsub for signal <res$addsub0000>.
+    Found 32-bit comparator less for signal <res$cmp_lt0000> created at line 35.
+    Found 32-bit comparator less for signal <res$cmp_lt0001> created at line 35.
+    Found 32-bit shifter logical left for signal <res$shift0000> created at line 35.
+    Found 32-bit shifter logical right for signal <res$shift0001> created at line 35.
+    Found 32-bit shifter arithmetic right for signal <res$shift0002> created at line 35.
+    Found 32-bit xor2 for signal <res$xor0000> created at line 35.
+    Found 33-bit addsub for signal <temp$addsub0000>.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <CP0>.
+    Related source file is "CP0.v".
+WARNING:Xst:646 - Signal <IP> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <Exc_Code> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <BD> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <Cause<31>>.
+    Found 6-bit register for signal <Cause<15:10>>.
+    Found 5-bit register for signal <Cause<6:2>>.
+    Found 32-bit register for signal <epc_rnm0>.
+    Found 32-bit subtractor for signal <epc_rnm0$addsub0000> created at line 94.
+    Found 32-bit 4-to-1 multiplexer for signal <epc_rnm0$mux0000>.
+    Found 32-bit register for signal <SR>.
+    Summary:
+	inferred  76 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 Multiplexer(s).
+Unit <CP0> synthesized.
+
+
+Synthesizing Unit <Controller>.
+    Related source file is "Controller.v".
+WARNING:Xst:647 - Input <I<10:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <Controller> synthesized.
+
+
+Synthesizing Unit <IF_ID>.
+    Related source file is "IF_ID.v".
+WARNING:Xst:646 - Signal <cp0_we> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <D_BD0>.
+    Found 32-bit register for signal <D_I>.
+    Found 5-bit register for signal <D_Exc0>.
+    Found 32-bit register for signal <D_PC>.
+    Found 32-bit 4-to-1 multiplexer for signal <D_PC$mux0000>.
+    Summary:
+	inferred  70 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <IF_ID> synthesized.
+
+
+Synthesizing Unit <ID_EX>.
+    Related source file is "ID_EX.v".
+WARNING:Xst:646 - Signal <mtc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mfc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jalr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jal> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <j> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bne> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bltz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <blez> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bgtz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bgez> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <beq> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <E_PC>.
+    Found 1-bit register for signal <E_BD0>.
+    Found 32-bit register for signal <E_RD1>.
+    Found 32-bit register for signal <E_RD2>.
+    Found 32-bit register for signal <E_I>.
+    Found 5-bit register for signal <E_Exc0>.
+    Summary:
+	inferred 134 D-type flip-flop(s).
+Unit <ID_EX> synthesized.
+
+
+Synthesizing Unit <EX_MEM>.
+    Related source file is "EX_MEM.v".
+WARNING:Xst:646 - Signal <xori> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <xor1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <subu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sub> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <srlv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <srl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <srav> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sra> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sltu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sltiu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <slti> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <slt> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sllv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sll> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ori> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <or1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <nor1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <multu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mult> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mtlo> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mthi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mflo> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mfhi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mfc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <lui> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jalr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jal> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <j> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <eret> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <divu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <div> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bne> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bltz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <blez> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bgtz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bgez> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <beq> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <andi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <and1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addiu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <M_AO>.
+    Found 1-bit register for signal <M_BD0>.
+    Found 5-bit register for signal <M_Exc0>.
+    Found 32-bit register for signal <M_RD2>.
+    Found 32-bit register for signal <M_PC>.
+    Found 1-bit register for signal <M_OV>.
+    Found 32-bit register for signal <M_I>.
+    Found 32-bit 4-to-1 multiplexer for signal <M_PC$mux0000>.
+    Summary:
+	inferred 135 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <EX_MEM> synthesized.
+
+
+Synthesizing Unit <MEM_WB>.
+    Related source file is "MEM_WB.v".
+WARNING:Xst:1305 - Output <CP0_A2> is never assigned. Tied to value 00000.
+WARNING:Xst:1305 - Output <cp0_we> is never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <xor1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sw> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <subu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sub> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <srlv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <srl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <srav> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sra> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sltu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <slt> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sllv> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sll> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sb> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <or1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <nor1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <multu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mult> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mtlo> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mthi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mtc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mflo> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mfhi> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <jr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <j> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <divu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <div> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bne> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bltz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <blez> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bgtz> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bgez> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <beq> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <and1> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <addu> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <add> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit register for signal <W_RD>.
+    Found 32-bit register for signal <W_Out>.
+    Found 32-bit register for signal <GRF_PC>.
+    Found 32-bit register for signal <W_EPC>.
+    Found 32-bit register for signal <W_AO>.
+    Found 32-bit register for signal <GRF_I>.
+    Summary:
+	inferred 192 D-type flip-flop(s).
+Unit <MEM_WB> synthesized.
+
+
+Synthesizing Unit <SFU>.
+    Related source file is "SFU.v".
+WARNING:Xst:646 - Signal <wb_store> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_rs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_mtc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_mfc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_md> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_j_rs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_j_2reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <wb_hl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_rs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_mfc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_md> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_j_rs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_j_2reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mem_hl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_mfc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_md> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_j_rs> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_j_2reg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ex_hl> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <d_rd> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <d_mfc0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <d_jal> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit comparator equal for signal <M_Data_s$cmp_eq0000> created at line 182.
+    Found 5-bit comparator equal for signal <M_Data_s$cmp_eq0001> created at line 182.
+    Found 5-bit comparator equal for signal <RD1_s$cmp_eq0000> created at line 147.
+    Found 5-bit comparator equal for signal <RD2_s$cmp_eq0000> created at line 154.
+    Found 5-bit comparator equal for signal <SrcA_s$cmp_eq0000> created at line 165.
+    Found 5-bit comparator equal for signal <SrcA_s$cmp_eq0001> created at line 165.
+    Found 5-bit comparator equal for signal <SrcA_s$cmp_eq0002> created at line 165.
+    Found 5-bit comparator equal for signal <SrcA_s$cmp_eq0003> created at line 165.
+    Found 5-bit comparator equal for signal <SrcB_s$cmp_eq0000> created at line 174.
+    Found 5-bit comparator equal for signal <SrcB_s$cmp_eq0001> created at line 174.
+    Found 5-bit comparator equal for signal <SrcB_s$cmp_eq0002> created at line 174.
+    Found 5-bit comparator equal for signal <SrcB_s$cmp_eq0003> created at line 174.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0000> created at line 138.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0001> created at line 138.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0002> created at line 138.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0003> created at line 138.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0004> created at line 138.
+    Found 5-bit comparator equal for signal <Stall$cmp_eq0005> created at line 138.
+    Summary:
+	inferred  18 Comparator(s).
+Unit <SFU> synthesized.
+
+
+Synthesizing Unit <CPU>.
+    Related source file is "CPU.v".
+WARNING:Xst:1780 - Signal <store> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <mdu_op_rnm0> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <lo> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:646 - Signal <if_ex_reset> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <hi> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000000.
+WARNING:Xst:1780 - Signal <W_Data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <W_A3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <W_A2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <M_Addr> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <CP0_Out> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Busy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+    Found 32-bit adder for signal <D_RD1$add0000> created at line 206.
+    Found 32-bit adder for signal <D_RD1$add0001> created at line 206.
+    Found 32-bit 4-to-1 multiplexer for signal <F_I>.
+    Found 32-bit adder for signal <GRF_WD$addsub0000> created at line 475.
+    Found 32-bit comparator greatequal for signal <HitDM$cmp_ge0000> created at line 436.
+    Found 32-bit comparator lessequal for signal <HitDM$cmp_le0000> created at line 436.
+    Found 32-bit comparator greatequal for signal <HitTC0$cmp_ge0000> created at line 437.
+    Found 32-bit comparator lessequal for signal <HitTC0$cmp_le0000> created at line 437.
+    Found 32-bit comparator greatequal for signal <HitTC1$cmp_ge0000> created at line 438.
+    Found 32-bit comparator lessequal for signal <HitTC1$cmp_le0000> created at line 438.
+    Found 32-bit comparator greater for signal <pc_addr_exc$cmp_gt0000> created at line 131.
+    Found 32-bit comparator less for signal <pc_addr_exc$cmp_lt0000> created at line 131.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <CPU> synthesized.
+
+
+Synthesizing Unit <mips>.
+    Related source file is "mips.v".
+WARNING:Xst:1780 - Signal <macro_pc> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <TC1_WD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <TC1_RD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <TC1_Addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <TC0_WD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <TC0_RD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <TC0_Addr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <PrWD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <DEV_Addr<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 32-bit comparator greatequal for signal <HitDM$cmp_ge0000> created at line 97.
+    Found 32-bit comparator lessequal for signal <HitDM$cmp_le0000> created at line 97.
+    Found 1-bit register for signal <tempIRP>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <mips> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 32-bit adder                                          : 5
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 3
+ 33-bit addsub                                         : 1
+# Registers                                            : 172
+ 1-bit register                                        : 115
+ 32-bit register                                       : 54
+ 5-bit register                                        : 3
+# Comparators                                          : 43
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 6
+ 32-bit comparator greater                             : 3
+ 32-bit comparator less                                : 3
+ 32-bit comparator lessequal                           : 6
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator less                                : 1
+ 33-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 20
+# Multiplexers                                         : 12
+ 32-bit 3-to-1 multiplexer                             : 2
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 4-to-1 multiplexer                             : 7
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <timer1/state/FSM> on signal <state[1:2]> with user encoding.
+Optimizing FSM <timer2/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+WARNING:Xst:1710 - FF/Latch <D_Exc0_2> (without init value) has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <D_Exc0_3> (without init value) has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <D_Exc0_5> (without init value) has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <D_Exc0_6> (without init value) has a constant value of 0 in block <if_id>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <E_Exc0_2> (without init value) has a constant value of 0 in block <id_ex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <E_Exc0_6> (without init value) has a constant value of 0 in block <id_ex>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <M_Exc0_2> (without init value) has a constant value of 0 in block <ex_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <M_Exc0_6> (without init value) has a constant value of 0 in block <ex_mem>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Cause_13> has a constant value of 0 in block <cp0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Cause_15> has a constant value of 0 in block <cp0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Cause_14> has a constant value of 0 in block <cp0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Cause_6> has a constant value of 0 in block <cp0>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <M_I_6> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <M_I_7> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <M_I_8> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <M_I_9> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <M_I_10> of sequential type is unconnected in block <ex_mem>.
+WARNING:Xst:2677 - Node <GRF_I_6> of sequential type is unconnected in block <mem_wb>.
+WARNING:Xst:2677 - Node <GRF_I_7> of sequential type is unconnected in block <mem_wb>.
+WARNING:Xst:2677 - Node <GRF_I_8> of sequential type is unconnected in block <mem_wb>.
+WARNING:Xst:2677 - Node <GRF_I_9> of sequential type is unconnected in block <mem_wb>.
+WARNING:Xst:2677 - Node <GRF_I_10> of sequential type is unconnected in block <mem_wb>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 10
+ 32-bit adder                                          : 5
+ 32-bit addsub                                         : 1
+ 32-bit subtractor                                     : 3
+ 33-bit addsub                                         : 1
+# Registers                                            : 1858
+ Flip-Flops                                            : 1858
+# Comparators                                          : 43
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 6
+ 32-bit comparator greater                             : 3
+ 32-bit comparator less                                : 3
+ 32-bit comparator lessequal                           : 6
+ 33-bit comparator greatequal                          : 1
+ 33-bit comparator greater                             : 1
+ 33-bit comparator less                                : 1
+ 33-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 20
+# Multiplexers                                         : 74
+ 1-bit 3-to-1 multiplexer                              : 64
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 4-to-1 multiplexer                             : 7
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <D_Exc0_2> in Unit <IF_ID> is equivalent to the following 3 FFs/Latches, which will be removed : <D_Exc0_3> <D_Exc0_5> <D_Exc0_6> 
+WARNING:Xst:1710 - FF/Latch <D_Exc0_2> (without init value) has a constant value of 0 in block <IF_ID>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <mips> ...
+
+Optimizing unit <Controller> ...
+
+Optimizing unit <NPC> ...
+
+Optimizing unit <IFU> ...
+
+Optimizing unit <GRF> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <CP0> ...
+
+Optimizing unit <IF_ID> ...
+
+Optimizing unit <ID_EX> ...
+
+Optimizing unit <EX_MEM> ...
+
+Optimizing unit <MEM_WB> ...
+
+Optimizing unit <SFU> ...
+
+Optimizing unit <CPU> ...
+WARNING:Xst:1710 - FF/Latch <cpu/ex_mem/M_Exc0_2> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu/ex_mem/M_Exc0_6> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu/id_ex/E_Exc0_2> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cpu/id_ex/E_Exc0_6> (without init value) has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu/cp0/Cause_13> has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu/cp0/Cause_15> has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu/cp0/Cause_14> has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cpu/cp0/Cause_6> has a constant value of 0 in block <mips>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <cpu/mem_wb/GRF_I_6> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/mem_wb/GRF_I_7> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/mem_wb/GRF_I_8> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/mem_wb/GRF_I_9> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/mem_wb/GRF_I_10> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/ex_mem/M_I_6> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/ex_mem/M_I_7> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/ex_mem/M_I_8> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/ex_mem/M_I_9> of sequential type is unconnected in block <mips>.
+WARNING:Xst:2677 - Node <cpu/ex_mem/M_I_10> of sequential type is unconnected in block <mips>.
+
+Mapping all equations...
+WARNING:Xst:2170 - Unit mips : the following signal(s) form a combinatorial loop: cpu/IntReq, cpu/cp0/IntReq30, cpu/cp0/IntReq48, m_data_byteen<3>, cpu/cp0_we, cpu/cp0_we30, cpu/cp0/EXL_and0000, cpu_we<3>.
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <cpu/id_ex/E_Exc0_3> in Unit <mips> is equivalent to the following FF/Latch, which will be removed : <cpu/id_ex/E_Exc0_5> 
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 395.
+Optimizing block <mips> to meet ratio 100 (+ 5) of 768 slices :
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+WARNING:Xst:2254 - Area constraint could not be met for block <mips>, final ratio is 384.
+FlipFlop cpu/id_ex/E_I_26 has been replicated 1 time(s)
+FlipFlop cpu/id_ex/E_I_27 has been replicated 1 time(s)
+FlipFlop cpu/id_ex/E_I_29 has been replicated 1 time(s)
+FlipFlop cpu/if_id/D_I_16 has been replicated 1 time(s)
+FlipFlop cpu/if_id/D_I_21 has been replicated 1 time(s)
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1844
+ Flip-Flops                                            : 1844
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mips.ngr
+Top Level Output File Name         : mips
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 301
+
+Cell Usage :
+# BELS                             : 7432
+#      BUF                         : 2
+#      GND                         : 1
+#      INV                         : 105
+#      LUT1                        : 119
+#      LUT2                        : 302
+#      LUT2_D                      : 13
+#      LUT2_L                      : 51
+#      LUT3                        : 2115
+#      LUT3_D                      : 58
+#      LUT3_L                      : 17
+#      LUT4                        : 1685
+#      LUT4_D                      : 251
+#      LUT4_L                      : 211
+#      MULT_AND                    : 27
+#      MUXCY                       : 504
+#      MUXF5                       : 1023
+#      MUXF6                       : 384
+#      MUXF7                       : 192
+#      MUXF8                       : 96
+#      VCC                         : 1
+#      XORCY                       : 275
+# FlipFlops/Latches                : 1844
+#      FD                          : 33
+#      FDE                         : 32
+#      FDR                         : 367
+#      FDRE                        : 1356
+#      FDRS                        : 50
+#      FDRSE                       : 1
+#      FDS                         : 3
+#      FDSE                        : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 300
+#      IBUF                        : 66
+#      OBUF                        : 234
+=========================================================================
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0000_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0000_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<1> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<2> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<3> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut cpu/alu/Mcompar_res_cmp_lt0001_lut<4> driving carry cpu/alu/Mcompar_res_cmp_lt0001_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+
+Device utilization summary:
+---------------------------
+
+Selected Device : xa3s50vqg100-4 
+
+ Number of Slices:                     2962  out of    768   385% (*) 
+ Number of Slice Flip Flops:           1844  out of   1536   120% (*) 
+ Number of 4 input LUTs:               4927  out of   1536   320% (*) 
+ Number of IOs:                         301
+ Number of bonded IOBs:                 301  out of     63   477% (*) 
+ Number of GCLKs:                         1  out of      8    12%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1844  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 32.293ns (Maximum Frequency: 30.966MHz)
+   Minimum input arrival time before clock: 18.101ns
+   Maximum output required time after clock: 26.670ns
+   Maximum combinational path delay: 19.495ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 32.293ns (frequency: 30.966MHz)
+  Total number of paths / destination ports: 1132313676 / 3739
+-------------------------------------------------------------------------
+Delay:               32.293ns (Levels of Logic = 61)
+  Source:            cpu/mem_wb/GRF_I_31 (FF)
+  Destination:       cpu/ifu/pc_rnm0_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cpu/mem_wb/GRF_I_31 to cpu/ifu/pc_rnm0_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.720   1.483  cpu/mem_wb/GRF_I_31 (cpu/mem_wb/GRF_I_31)
+     LUT3_D:I0->LO         1   0.551   0.126  cpu/sfu/ctrl_wb/beq11 (N2014)
+     LUT4:I3->O           17   0.551   1.371  cpu/sfu/ctrl_wb/jal1 (cpu/RaWrite)
+     LUT4:I3->O           71   0.551   2.272  cpu/GRF_A3<3>1 (w_grf_addr_3_OBUF)
+     LUT2:I1->O            8   0.551   1.151  cpu/grf/GPR_0_and000021 (cpu/grf/N111)
+     LUT4:I2->O            3   0.551   0.975  cpu/grf/GPR_0_and00001 (cpu/grf/GPR_0_and0000)
+     LUT4:I2->O           37   0.551   1.950  cpu/grf/RD1_and000096 (cpu/grf/RD1_and0000)
+     LUT3:I2->O            1   0.551   0.869  cpu/D_RD1<1>54_F_SW0 (N1400)
+     LUT3:I2->O            1   0.551   0.000  cpu/D_RD1<1>54_F (N1816)
+     MUXF5:I0->O           4   0.360   0.943  cpu/D_RD1<1>54 (cpu/D_RD1<1>)
+     LUT4:I3->O            1   0.551   0.000  cpu/cmp/Mcompar_zero_lut<0> (cpu/cmp/Mcompar_zero_lut<0>)
+     MUXCY:S->O            1   0.500   0.000  cpu/cmp/Mcompar_zero_cy<0> (cpu/cmp/Mcompar_zero_cy<0>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<1> (cpu/cmp/Mcompar_zero_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<2> (cpu/cmp/Mcompar_zero_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<3> (cpu/cmp/Mcompar_zero_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<4> (cpu/cmp/Mcompar_zero_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<5> (cpu/cmp/Mcompar_zero_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<6> (cpu/cmp/Mcompar_zero_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<7> (cpu/cmp/Mcompar_zero_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<8> (cpu/cmp/Mcompar_zero_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<9> (cpu/cmp/Mcompar_zero_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<10> (cpu/cmp/Mcompar_zero_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<11> (cpu/cmp/Mcompar_zero_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<12> (cpu/cmp/Mcompar_zero_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<13> (cpu/cmp/Mcompar_zero_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/cmp/Mcompar_zero_cy<14> (cpu/cmp/Mcompar_zero_cy<14>)
+     MUXCY:CI->O          11   0.303   1.339  cpu/cmp/Mcompar_zero_cy<15> (cpu/cmp/Mcompar_zero_cy<15>)
+     LUT2_D:I1->O          2   0.551   0.903  cpu/next_pc/npc_mux0000<10>120 (cpu/next_pc/npc_mux0000<10>120)
+     LUT4:I3->O           29   0.551   1.862  cpu/next_pc/npc_mux0000<10>174_1 (cpu/next_pc/npc_mux0000<10>174)
+     LUT4:I3->O            1   0.551   0.827  cpu/next_pc/npc_mux0001<3>_SW0_SW0 (N1270)
+     LUT4:I3->O            1   0.551   0.000  cpu/next_pc/Madd_npc_addsub0000_lut<3> (cpu/next_pc/Madd_npc_addsub0000_lut<3>)
+     MUXCY:S->O            1   0.500   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<3> (cpu/next_pc/Madd_npc_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<4> (cpu/next_pc/Madd_npc_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<5> (cpu/next_pc/Madd_npc_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<6> (cpu/next_pc/Madd_npc_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<7> (cpu/next_pc/Madd_npc_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<8> (cpu/next_pc/Madd_npc_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<9> (cpu/next_pc/Madd_npc_addsub0000_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<10> (cpu/next_pc/Madd_npc_addsub0000_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<11> (cpu/next_pc/Madd_npc_addsub0000_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<12> (cpu/next_pc/Madd_npc_addsub0000_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<13> (cpu/next_pc/Madd_npc_addsub0000_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<14> (cpu/next_pc/Madd_npc_addsub0000_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<15> (cpu/next_pc/Madd_npc_addsub0000_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<16> (cpu/next_pc/Madd_npc_addsub0000_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<17> (cpu/next_pc/Madd_npc_addsub0000_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<18> (cpu/next_pc/Madd_npc_addsub0000_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<19> (cpu/next_pc/Madd_npc_addsub0000_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<20> (cpu/next_pc/Madd_npc_addsub0000_cy<20>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<21> (cpu/next_pc/Madd_npc_addsub0000_cy<21>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<22> (cpu/next_pc/Madd_npc_addsub0000_cy<22>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<23> (cpu/next_pc/Madd_npc_addsub0000_cy<23>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<24> (cpu/next_pc/Madd_npc_addsub0000_cy<24>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<25> (cpu/next_pc/Madd_npc_addsub0000_cy<25>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<26> (cpu/next_pc/Madd_npc_addsub0000_cy<26>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<27> (cpu/next_pc/Madd_npc_addsub0000_cy<27>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<28> (cpu/next_pc/Madd_npc_addsub0000_cy<28>)
+     MUXCY:CI->O           1   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<29> (cpu/next_pc/Madd_npc_addsub0000_cy<29>)
+     MUXCY:CI->O           0   0.064   0.000  cpu/next_pc/Madd_npc_addsub0000_cy<30> (cpu/next_pc/Madd_npc_addsub0000_cy<30>)
+     XORCY:CI->O           3   0.904   0.975  cpu/next_pc/Madd_npc_addsub0000_xor<31> (cpu/next_pc/npc_addsub0000<31>)
+     LUT3:I2->O            1   0.551   0.869  cpu/next_pc/IntReq_1023 (cpu/next_pc/IntReq_1023)
+     LUT4:I2->O            1   0.551   0.000  cpu/next_pc/IntReq241 (cpu/npc<31>)
+     FDRE:D                    0.203          cpu/ifu/pc_rnm0_31
+    ----------------------------------------
+    Total                     32.293ns (14.379ns logic, 17.914ns route)
+                                       (44.5% logic, 55.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 9160 / 2416
+-------------------------------------------------------------------------
+Offset:              18.101ns (Levels of Logic = 11)
+  Source:            interrupt (PAD)
+  Destination:       timer1/mem_2_31 (FF)
+  Destination Clock: clk rising
+
+  Data Path: interrupt to timer1/mem_2_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.821   1.198  interrupt_IBUF (interrupt_IBUF)
+     LUT4:I1->O            4   0.551   1.256  cpu/ExcCode_and00001 (cpu/ExcCode_and0000)
+     LUT4:I0->O            2   0.551   0.903  cpu/ExcCode<4>1 (cpu/ExcCode<4>)
+     LUT4_L:I3->LO         1   0.551   0.126  cpu/cp0/IntReq30 (cpu/cp0/IntReq30)
+     LUT4:I3->O            1   0.551   1.140  cpu/cp0/IntReq48 (cpu/cp0/IntReq48)
+     LUT4:I0->O          155   0.551   2.753  cpu/cp0/IntReq92 (cpu/IntReq)
+     LUT2_D:I1->O         13   0.551   1.196  TC0_WE_cmp_eq00001 (TC0_WE_cmp_eq0000)
+     LUT4:I3->O            1   0.551   0.827  timer1/mem_2_mux0001<0>1_SW0 (N919)
+     LUT4_D:I3->O         31   0.551   1.873  timer1/mem_2_mux0001<0>1 (N0)
+     LUT4_L:I3->LO         1   0.551   0.295  timer1/mem_2_mux0001<9>9 (timer1/mem_2_mux0001<9>9)
+     LUT2:I1->O            1   0.551   0.000  timer1/mem_2_mux0001<9>10 (timer1/mem_2_mux0001<9>)
+     FDRE:D                    0.203          timer1/mem_2_9
+    ----------------------------------------
+    Total                     18.101ns (6.534ns logic, 11.567ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 33489 / 234
+-------------------------------------------------------------------------
+Offset:              26.670ns (Levels of Logic = 20)
+  Source:            cpu/ex_mem/M_AO_3 (FF)
+  Destination:       m_data_byteen<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: cpu/ex_mem/M_AO_3 to m_data_byteen<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             65   0.720   2.381  cpu/ex_mem/M_AO_3 (cpu/ex_mem/M_AO_3)
+     LUT1:I0->O            1   0.551   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<1>_1_rt (cpu/Mcompar_HitDM_cmp_le0000_cy<1>_1_rt)
+     MUXCY:S->O            1   0.500   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<1>_1 (cpu/Mcompar_HitDM_cmp_le0000_cy<1>2)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<2>_1 (cpu/Mcompar_HitDM_cmp_le0000_cy<2>2)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<3>_1 (cpu/Mcompar_HitDM_cmp_le0000_cy<3>2)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<4>_1 (cpu/Mcompar_HitDM_cmp_le0000_cy<4>2)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<5>_1 (cpu/Mcompar_HitDM_cmp_le0000_cy<5>2)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<6>_1 (cpu/Mcompar_HitDM_cmp_le0000_cy<6>1)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<7>_0 (cpu/Mcompar_HitDM_cmp_le0000_cy<7>1)
+     MUXCY:CI->O           1   0.064   0.000  cpu/Mcompar_HitDM_cmp_le0000_cy<8>_0 (cpu/Mcompar_HitDM_cmp_le0000_cy<8>1)
+     MUXCY:CI->O           3   0.303   1.102  cpu/Mcompar_HitDM_cmp_le0000_cy<9>_0 (cpu/HitTC0_cmp_le0000)
+     LUT2_L:I1->LO         1   0.551   0.126  cpu/store_exc1_SW0 (N137)
+     LUT4:I3->O           12   0.551   1.186  cpu/store_exc1 (cpu/N32)
+     LUT3:I2->O            1   0.551   0.869  cpu/load_exc47 (cpu/load_exc47)
+     LUT3_D:I2->O          3   0.551   1.246  cpu/load_exc51 (cpu/load_exc)
+     LUT4:I0->O            2   0.551   0.945  cpu/ExcCode<5>1 (cpu/ExcCode<5>)
+     LUT4:I2->O            1   0.551   1.140  cpu/cp0/IntReq48 (cpu/cp0/IntReq48)
+     LUT4:I0->O          155   0.551   2.753  cpu/cp0/IntReq92 (cpu/IntReq)
+     LUT4:I1->O            1   0.551   0.996  cpu/m_data_byteen<3>1 (cpu_we<3>)
+     LUT3:I1->O            1   0.551   0.801  m_data_byteen<3>1 (m_data_byteen_3_OBUF)
+     OBUF:I->O                 5.644          m_data_byteen_3_OBUF (m_data_byteen<3>)
+    ----------------------------------------
+    Total                     26.670ns (13.125ns logic, 13.545ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24 / 4
+-------------------------------------------------------------------------
+Delay:               19.495ns (Levels of Logic = 9)
+  Source:            interrupt (PAD)
+  Destination:       m_data_byteen<3> (PAD)
+
+  Data Path: interrupt to m_data_byteen<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.821   1.198  interrupt_IBUF (interrupt_IBUF)
+     LUT4:I1->O            4   0.551   1.256  cpu/ExcCode_and00001 (cpu/ExcCode_and0000)
+     LUT4:I0->O            2   0.551   0.903  cpu/ExcCode<4>1 (cpu/ExcCode<4>)
+     LUT4_L:I3->LO         1   0.551   0.126  cpu/cp0/IntReq30 (cpu/cp0/IntReq30)
+     LUT4:I3->O            1   0.551   1.140  cpu/cp0/IntReq48 (cpu/cp0/IntReq48)
+     LUT4:I0->O          155   0.551   2.753  cpu/cp0/IntReq92 (cpu/IntReq)
+     LUT4:I1->O            1   0.551   0.996  cpu/m_data_byteen<3>1 (cpu_we<3>)
+     LUT3:I1->O            1   0.551   0.801  m_data_byteen<3>1 (m_data_byteen_3_OBUF)
+     OBUF:I->O                 5.644          m_data_byteen_3_OBUF (m_data_byteen<3>)
+    ----------------------------------------
+    Total                     19.495ns (10.322ns logic, 9.173ns route)
+                                       (52.9% logic, 47.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.69 secs
+ 
+--> 
+
+Total memory usage is 4664636 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  195 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+

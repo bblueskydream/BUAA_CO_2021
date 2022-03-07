@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompilers" num="259" delta="new" ><arg fmt="%s" index="1">&quot;mips.v&quot; line 160 </arg>Connection to input port &apos;<arg fmt="%s" index="2">A</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="259" delta="new" ><arg fmt="%s" index="1">&quot;mips.v&quot; line 161 </arg>Connection to input port &apos;<arg fmt="%s" index="2">B</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="HDLCompilers" num="261" delta="new" ><arg fmt="%s" index="1">&quot;SFU.v&quot; line 42 </arg>Connection to output port &apos;<arg fmt="%s" index="2">j_rs</arg>&apos; does not match port size
+</msg>
+
+<msg type="warning" file="Xst" num="852" delta="new" >&quot;<arg fmt="%s" index="1">mips.v</arg>&quot; line <arg fmt="%d" index="2">179</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">WE</arg>&apos; of instance &apos;<arg fmt="%s" index="4">id_ex</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="852" delta="new" >&quot;<arg fmt="%s" index="1">mips.v</arg>&quot; line <arg fmt="%d" index="2">349</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">busy</arg>&apos; of instance &apos;<arg fmt="%s" index="4">sfu</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="852" delta="new" >&quot;<arg fmt="%s" index="1">mips.v</arg>&quot; line <arg fmt="%d" index="2">349</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">start</arg>&apos; of instance &apos;<arg fmt="%s" index="4">sfu</arg>&apos; is tied to GND.
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="new" >&quot;<arg fmt="%s" index="1">IFU.v</arg>&quot; line <arg fmt="%d" index="2">27</arg>: Name conflict (<arg fmt="%s" index="3">&lt;pc&gt; and &lt;PC&gt;, renaming pc as pc_rnm0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="1643" delta="new" >&quot;<arg fmt="%s" index="1">GRF.v</arg>&quot; line <arg fmt="%d" index="2">32</arg>: You are giving the signal <arg fmt="%s" index="3">i</arg> a default value. <arg fmt="%s" index="4">i</arg> already had a default value, which will be overridden by this one.
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="new" >&quot;<arg fmt="%s" index="1">MU_DIV.v</arg>&quot; line <arg fmt="%d" index="2">26</arg>: Name conflict (<arg fmt="%s" index="3">&lt;HI&gt; and &lt;hi&gt;, renaming HI as hi_rnm0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="new" >&quot;<arg fmt="%s" index="1">MU_DIV.v</arg>&quot; line <arg fmt="%d" index="2">26</arg>: Name conflict (<arg fmt="%s" index="3">&lt;LO&gt; and &lt;lo&gt;, renaming LO as lo_rnm0</arg>).
+</msg>
+
+<msg type="error" file="Xst" num="870" delta="new" >&quot;<arg fmt="%s" index="1">MU_DIV.v</arg>&quot; line <arg fmt="%d" index="2">58</arg>: Can not simplify operator <arg fmt="%s" index="3">MOD</arg>.
+</msg>
+
+</messages>
+

@@ -1,0 +1,5 @@
+verilog work "GRF.v"
+verilog work "Ext.v"
+verilog work "DM.v"
+verilog work "Controller.v"
+verilog work "mips.v"

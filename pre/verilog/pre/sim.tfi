@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+sim instance_name (
+    .clk(clk), 
+    .a(a), 
+    .b(b), 
+    .c(c)
+    );
+
+

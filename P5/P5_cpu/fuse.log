@@ -1,0 +1,40 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "G:/CS_Project/P5/P5_cpu/mips_tb_isim_beh.exe" -prj "G:/CS_Project/P5/P5_cpu/mips_tb_beh.prj" "work.mips_tb" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/Controller.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/SFU.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/MEM_WB.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/IF_ID.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/ID_EX.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/GRF.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/EX_MEM.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/Ext.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/DM.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/ALU.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/mips.v" into library work
+Analyzing Verilog file "G:/CS_Project/P5/P5_cpu/mips_tb.v" into library work
+Analyzing Verilog file "E:/ISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IFU
+Compiling module Controller
+Compiling module IF_ID
+Compiling module GRF
+Compiling module ID_EX
+Compiling module Ext
+Compiling module ALU
+Compiling module EX_MEM
+Compiling module DM
+Compiling module MEM_WB
+Compiling module SFU
+Compiling module mips
+Compiling module mips_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 14 Verilog Units
+Built simulation executable G:/CS_Project/P5/P5_cpu/mips_tb_isim_beh.exe
+Fuse Memory Usage: 31932 KB
+Fuse CPU Usage: 483 ms
